@@ -9,6 +9,8 @@ import { useContext } from 'react';
 
 function App() {
   const {pendingTodos} = useContext(PendingContext)
+  const {doneTodos} = useContext(DoneContext)
+  const {deletedTodos} = useContext(DeletedContext)
   return (
     <div className="app">
 
@@ -28,13 +30,13 @@ function App() {
       </div>
       <div className="row">
         <div className="col-md-4">
-          <Task toDos={pendingTodos} />
+          <Task toDos={pendingTodos} title='Pending ToDos' />
         </div>
         <div className="col-md-4">
-          <Task toDos={[]}/>
+          <Task toDos={doneTodos} title='Done ToDos' />
         </div>
         <div className="col-md-4">
-          <Task toDos={[]}/>
+          <Task toDos={deletedTodos} title='Deleted ToDos' />
         </div>
       </div>
     </div>

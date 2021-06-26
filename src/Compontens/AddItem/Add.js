@@ -5,36 +5,44 @@ import { PendingContext } from '../../Context/PendingContext';
 
 function Add() {
     const [toDos, setTodos] = useState([])
-    const {pendingTodos, setPendingTodos} = useContext(PendingContext)
+    const { pendingTodos, setPendingTodos } = useContext(PendingContext)
 
     return (
         <div>
             <div className="add">
-                <div className="input-text">
-                    <input id="title"  type="text" placeholder="Add item..." />
-                    {/* <i onClick={() => setTodos([...toDos, { id: Date.now(), text: toDo, status: false }])} className="fas fa-plus"></i> */}
-                </div>
-                <div className="schedule">
-                    <div className="date">
-                        <input type="date" name="" id="date" />
+                <form action="" id="form">
+                    <div className="input-text">
+                        <input id="title" type="text" placeholder="Add item..." />
+                        {/* <i onClick={() => setTodos([...toDos, { id: Date.now(), text: toDo, status: false }])} className="fas fa-plus"></i> */}
                     </div>
-                    <div className="time">
-                        <input type="time" name="" id="time" />
+                    <div className="schedule">
+                        <div className="date">
+                            <input type="date" name="" id="date1" />
+                        </div>
+                        <div className="time">
+                            <input type="time" name="" id="time1" />
+                        </div>
                     </div>
-                </div>
-                <div className="input-description">
-                    <textarea name="" id="description" cols="30" rows="10" placeholder="Add description..." ></textarea>
-                </div>
-                <div className="submit-button">
-                    <button className="btn btn-success" onClick={() => setPendingTodos([...pendingTodos, { 
-                        id: Date.now(), 
-                        text: document.getElementById('title').value, 
-                        date: document.getElementById('date').value, 
-                        time: document.getElementById('time').value, 
-                        description:document.getElementById('description').value, 
-                        status: false }])} > Add </button>
-                </div>
-
+                    <div className="input-description">
+                        <textarea name="" id="description" cols="30" rows="10" placeholder="Add description..." ></textarea>
+                    </div>
+                    <div className="submit-button">
+                        <button className="btn btn-success" onClick={(e) => {
+                            e.preventDefault()
+                            setPendingTodos([...pendingTodos, {
+                                id: Date.now(),
+                                text: document.getElementById('title').value,
+                                date: document.getElementById('date1').value,
+                                time: document.getElementById('time1').value,
+                                description: document.getElementById('description').value,
+                                status: false
+                            }])
+                            let form = document.getElementById('form')
+                            form.reset()
+                        }
+                        } > Add </button>
+                    </div>
+                </form>
             </div>
             <div className="todos">
                 {toDos.map((value) => {
