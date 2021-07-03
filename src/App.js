@@ -7,6 +7,7 @@ import {DoneContext} from './Context/DoneContext'
 import {DeletedContext} from './Context/DeletedContext'
 import { useContext } from 'react';
 import Corona from './Compontens/Corona/Corona';
+import Quotes from './Compontens/Quotes/Quotes';
 
 function App() {
   const {pendingTodos} = useContext(PendingContext)
@@ -21,6 +22,7 @@ function App() {
       <div className="row">
         <div className="col-md-4">
           <Weather />
+          <Quotes/>
         </div>
         <div className="col-md-4">
           <Add />

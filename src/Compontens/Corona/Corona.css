@@ -1,5 +1,7 @@
 .corana{
-    width: 395px;
+    margin-left: 16px;
+    margin-right: 16px;
+    /* width: 395px; */
 }
 h5{
     color: #fff;
@@ -15,7 +17,7 @@ p{
 }
 
 .box{
-    width: 86px;
+    width: 82px;
     height: 71px;
     margin: 5px;
     text-align: center;

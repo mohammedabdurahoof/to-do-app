@@ -38,20 +38,20 @@ function Corona() {
                             <Row>
                                 <div className="box box1">
                                     <h5>Total</h5>
-                                    <p>{world && Math.round(world.cases / 1000000) - 1 + ' M'}</p>
+                                    <p>{world && Math.floor(world.cases / 10000000)+ ' C'}</p>
                                 </div>
                                 <div className="box box2">
                                     <h5>Active</h5>
-                                    <p>{world && Math.round(world.active / 1000000) - 1 + ' M'}</p>
+                                    <p>{world && Math.floor(world.active / 10000000) + ' C'}</p>
                                 </div>
                                 <div className="box box3">
-                                    <h5  >Recove</h5>
-                                    <p>{world && Math.round(world.recovered / 1000000) - 1 + ' M'}</p>
+                                    <h5  >Recov</h5>
+                                    <p>{world && Math.floor(world.recovered / 10000000) + ' C'}</p>
 
                                 </div>
                                 <div className="box box4">
                                     <h5>Deaths</h5>
-                                    <p>{world && Math.round(world.deaths / 1000000) - 1 + ' M'}</p>
+                                    <p>{world && Math.floor(world.deaths / 100000)+ ' L'}</p>
 
                                 </div>
                             </Row>
@@ -69,19 +69,19 @@ function Corona() {
                             <Row>
                                 <div className="box box1">
                                     <h5>Total</h5>
-                                    <p>{india && Math.round(india.cases / 1000000) - 1 + ' M'}</p>
+                                    <p>{india && Math.floor(india.cases / 10000000)  + ' C'}</p>
                                 </div>
                                 <div className="box box2">
                                     <h5>Active</h5>
-                                    <p>{india && Math.round(india.active / 1000) - 1 + ' K'}</p>
+                                    <p>{india && Math.floor(india.active / 100000)  + ' L'}</p>
                                 </div>
                                 <div className="box box3">
-                                    <h5>Recove</h5>
-                                    <p>{india && Math.round(india.recovered / 1000000) - 1 + ' M'}</p>
+                                    <h5>Recov</h5>
+                                    <p>{india && Math.floor(india.recovered / 10000000) + ' C'}</p>
                                 </div>
                                 <div className="box box4">
                                     <h5>Deaths</h5>
-                                    <p>{india && Math.round(india.deaths / 1000) - 1 + ' K'}</p>
+                                    <p>{india && Math.floor(india.deaths / 100000)  + ' L'}</p>
                                 </div>
                             </Row>
                         </Card.Body>
@@ -98,19 +98,19 @@ function Corona() {
                             <Row>
                                 <div className="box box1">
                                     <h5>Total</h5>
-                                    <p>{kerala && Math.round(kerala.confirmed / 1000000) - 1 + ' M'}</p>
+                                    <p>{kerala && Math.floor(kerala.confirmed / 100000) + ' L'}</p>
                                 </div>
                                 <div className="box box2">
                                     <h5>Active</h5>
-                                    <p>{kerala && Math.round(kerala.active / 1000) - 1 + ' K'}</p>
+                                    <p>{kerala && Math.floor(kerala.active / 100000)+ ' L'}</p>
                                 </div>
                                 <div className="box box3">
-                                    <h5>Recove</h5>
-                                    <p>{kerala && Math.round(kerala.recovered / 1000000) - 1 + ' M'}</p>
+                                    <h5>Recov</h5>
+                                    <p>{kerala && Math.floor(kerala.recovered / 100000)+ ' L'}</p>
                                 </div>
                                 <div className="box box4">
                                     <h5>Deaths</h5>
-                                    <p>{kerala && kerala.deceased / 1000000}</p>
+                                    <p>{kerala && Math.floor(kerala.deceased / 1000)+ ' K'}</p>
                                 </div>
                             </Row>
                         </Card.Body>
