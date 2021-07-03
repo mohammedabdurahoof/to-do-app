@@ -6,6 +6,7 @@ import {PendingContext} from './Context/PendingContext';
 import {DoneContext} from './Context/DoneContext'
 import {DeletedContext} from './Context/DeletedContext'
 import { useContext } from 'react';
+import Corona from './Compontens/Corona/Corona';
 
 function App() {
   const {pendingTodos} = useContext(PendingContext)
@@ -25,7 +26,7 @@ function App() {
           <Add />
         </div>
         <div className="col-md-4">
-
+            <Corona/>
         </div>
       </div>
       <div className="row">

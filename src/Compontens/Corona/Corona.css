@@ -1,0 +1,39 @@
+.corana{
+    width: 395px;
+}
+h5{
+    color: #fff;
+}
+
+p{
+    color: #fff;
+    font-size: 23px;
+}
+.bedg{
+    color: #000;
+    font-size: 20px;
+}
+
+.box{
+    width: 86px;
+    height: 71px;
+    margin: 5px;
+    text-align: center;
+    padding-top: 5px;
+}
+
+.box1{
+    background-color: #0d6efd;
+}
+
+.box2{
+    background-color: #ffc107;
+}
+
+.box3{
+    background-color: #198754;
+}
+
+.box4{
+    background-color: #dc3545;
+}

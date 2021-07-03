@@ -6,7 +6,6 @@ import $ from 'jquery'
 
 function Weather() {
     useEffect(() => {
-        console.log('ji');
         var weatherModule = (function () {
             var owm = {
                 init: function () {
@@ -72,7 +71,7 @@ function Weather() {
                         "//api.openweathermap.org/data/2.5/weather?APPID=d65a9694ae6425d1e080326aab19db69&units=imperial&q=";
                     if (url === undefined || url === "") {
                         url =
-                            "//api.openweathermap.org/data/2.5/weather?APPID=d65a9694ae6425d1e080326aab19db69&units=imperial&q=san%20diego";
+                            "//api.openweathermap.org/data/2.5/weather?APPID=d65a9694ae6425d1e080326aab19db69&units=imperial&q=kerala";
                     } else {
                         while (url.charAt(0) === " ") {
                             url = url.substr(1);
@@ -219,7 +218,7 @@ function Weather() {
                     </label>
                     <div className="weather-status">
                         <input type="checkbox" id="xBxHack" />
-                        <div id="city" className="city">San Diego</div>
+                        <div id="city" className="city">Kerala</div>
                         <input id="userCity" className="userCity" type="text" placeholder="Enter City" />
                         <div id="forcast" className="forcast">Sky Is Clear</div>
                     </div>
